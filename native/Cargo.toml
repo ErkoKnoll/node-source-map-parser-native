@@ -1,0 +1,19 @@
+[package]
+name = "node-source-map-parser-native"
+version = "0.1.0"
+authors = ["Erko Knoll"]
+license = "MIT"
+build = "build.rs"
+edition = "2018"
+exclude = ["artifacts.json", "index.node"]
+
+[lib]
+name = "node_source_map_parser_native"
+crate-type = ["cdylib"]
+
+[build-dependencies]
+neon-build = "0.7.1"
+
+[dependencies]
+neon = "0.7.1"
+sourcemap = "*"
